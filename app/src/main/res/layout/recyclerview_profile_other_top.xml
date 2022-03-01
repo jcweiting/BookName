@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_blue2C4355"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_mutate_background="true"
+        app:riv_oval="true" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/post_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="20"
+        android:textColor="@color/light_grey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/post"
+        app:layout_constraintLeft_toLeftOf="@id/post"
+        app:layout_constraintRight_toRightOf="@id/post"
+        app:layout_constraintTop_toTopOf="@id/profile_picture" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="30dp"
+        android:text="貼文"
+        android:textColor="@color/light_grey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_picture"
+        app:layout_constraintLeft_toRightOf="@+id/profile_picture"
+        app:layout_constraintTop_toBottomOf="@+id/post_count" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/follower_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="@color/light_grey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_count"
+        app:layout_constraintLeft_toLeftOf="@id/follower"
+        app:layout_constraintRight_toRightOf="@id/follower"
+        app:layout_constraintTop_toTopOf="@id/post_count" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="粉絲"
+        android:textColor="@color/light_grey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/post"
+        app:layout_constraintLeft_toRightOf="@+id/post"
+        app:layout_constraintRight_toLeftOf="@+id/following"
+        app:layout_constraintTop_toTopOf="@+id/post" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/following_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="@color/light_grey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_count"
+        app:layout_constraintLeft_toLeftOf="@id/following"
+        app:layout_constraintRight_toRightOf="@id/following"
+        app:layout_constraintTop_toTopOf="@id/post_count" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="追蹤中"
+        android:textColor="@color/light_grey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/post"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/post" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/set_follow"
+        app:layout_constraintTop_toBottomOf="@id/profile_picture"
+        android:layout_marginTop="23dp"
+        android:text="追蹤"
+        android:gravity="center"
+        android:textColor="@color/light_grey"
+        android:padding="7dp"
+        android:background="@drawable/edit_profile_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/set_message"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/set_message"
+        app:layout_constraintTop_toBottomOf="@id/profile_picture"
+        app:layout_constraintLeft_toRightOf="@+id/set_follow"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="23dp"
+        android:text="發訊息"
+        android:gravity="center"
+        android:textColor="@color/light_grey"
+        android:padding="7dp"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+<!--    empty space-->
+    <TextView
+        android:id="@+id/empty"
+        app:layout_constraintTop_toBottomOf="@+id/set_follow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

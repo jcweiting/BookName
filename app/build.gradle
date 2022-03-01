@@ -1,0 +1,134 @@
+plugins {
+    id 'com.android.application'
+
+    //FireBase Import=====================
+    id 'com.google.gms.google-services'
+    //====================================
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.second_book_exchange"
+        minSdk 21
+        targetSdk 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    //CALL API =====================================================
+    def retrofitVersion = "2.5.0"
+    def rxjava_version = '2.2.7'
+    def rxandroid_version = '2.1.1'
+    def recyclerview_version = "1.0.0"
+    def rxbinding_ersion = "3.0.0-alpha2"
+
+
+    // Retrofit --> 專門CALL API / 處理網路連線的工具
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // RxJava --> 專門處理非同步的套件
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+
+    // RxJava Call Adapter
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.5.0"
+
+    // RxAndroid
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+
+    // Recyclerview
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+
+    //RxBinding
+    implementation "com.jakewharton.rxbinding3:rxbinding:$rxbinding_ersion"
+    //==================================================================
+
+    //TextInputLayout Layout Import
+    implementation 'com.google.android.material:material:1.3.0'
+
+    //照片上傳套件=========================
+    //下載圖片
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //裁減圖套件
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'androidx.work:work-runtime:2.3.2'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    //====================================
+
+    //round picture======================
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //====================================
+
+
+    //Gson================================
+    implementation 'com.google.code.gson:gson:2.8.9'
+    //====================================
+
+
+    //Google Custom Sign In Button========
+    // P.S: For Android Studio versions below 3.0, use compile keyword
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
+    //====================================
+
+
+    //FireBase Import=====================
+
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+
+    //儲存照片的資料庫  https://firebase.google.com/docs/storage/android/start?authuser=0 這是官方文件的網址
+    implementation 'com.google.firebase:firebase-storage'
+
+    //下載圖片套件
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:29.0.2')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.android.gms:play-services-auth:20.0.0'
+    // Declare the dependency for the Cloud Firestore library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // Declare the dependency for the Cloud Storage library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-storage'
+
+    //====================================
+
+
+    //RecyclerView Import=================
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    // For control over item selection of both touch and mouse driven selection
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
+    //====================================
+
+
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

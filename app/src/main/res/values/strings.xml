@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">BOOK TREE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="client_id">383111724544-4q2gu4vhq39np6s3399aq153kvq26fnl.apps.googleusercontent.com</string>
+    <string name="log_in">Login</string>
+
+    <string name="hint_book_name">書名 <font color='#FF0000'>*</font></string>
+    <string name="hint_book_classify">類別 <font color='#FF0000'>*</font></string>
+    <string name="hint_book_qty">數量 <font color='#FF0000'>*</font></string>
+    <string name="hint_book_status">書況 <font color='#FF0000'>*</font></string>
+    <string name="hint_book_shipment">運送 <font color='#FF0000'>*</font></string>
+    <string name="hint_book_unit_price">單價 <font color='#FF0000'>*</font></string>
+    <string name="hint_book_total_price">總價 </string>
+    <string name="plz_input_account">請輸入帳號</string>
+    <string name="account_counter">帳號字元不得超過10</string>
+    <string name="over_max_length">字數錯誤</string>
+    <string name="classify000">000 總類</string>
+    <string name="classify100">100 哲學</string>
+    <string name="classify200">200 宗教</string>
+    <string name="classify300">300 自然科學</string>
+    <string name="classify400">400 應用科學</string>
+    <string name="classify500">500 社會科學</string>
+    <string name="classify600">600 中國史地</string>
+    <string name="classify700">700 外國史地</string>
+    <string name="classify800">800 語文</string>
+    <string name="classify900">900 美術</string>
+    <string name="add_to_cart">加入購物車</string>
+    <string name="add_to_favorite">加到我的最愛</string>
+    <string name="description">書本敘述</string>
+    <string name="classify">書本分類</string>
+    <string name="qty">現有數量</string>
+    <string name="status">目前書況</string>
+    <string name="shipment">運送方式</string>
+    <string name="remark">備註</string>
+    <string name="unitPrice">單價</string>
+    <string name="totalPrice">總價</string>
+    <string name="key_word">熱門關鍵字</string>
+    <string name="classify_category">分類項目</string>
+    <string name="keyword">請輸入書名關鍵字</string>
+    <string name="no_data">無相關書籍</string>
+    <string name="checkout">結帳</string>
+    <string name="placeorder">送出訂單</string>
+    <string name="select_all">全選</string>
+    <string name="send">傳送</string>
+
+
+</resources>

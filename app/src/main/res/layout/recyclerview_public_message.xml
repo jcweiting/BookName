@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_blue2C4355"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:riv_mutate_background="true"
+        app:riv_oval="true" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/public_message_id"
+        android:layout_marginLeft="10dp"
+        android:text="SHOW MESSAGE ID"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/profile_picture"
+        app:layout_constraintBottom_toTopOf="@+id/public_message_content"
+        app:layout_constraintLeft_toRightOf="@+id/profile_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/public_message_content"
+        android:text="SHOW MESSAGE"
+        android:textSize="14sp"
+        android:textColor="@color/light_grey"
+        app:layout_constraintTop_toBottomOf="@+id/public_message_id"
+        app:layout_constraintLeft_toLeftOf="@+id/public_message_id"
+        app:layout_constraintBottom_toBottomOf="@id/profile_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

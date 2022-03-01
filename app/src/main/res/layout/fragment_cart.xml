@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CartFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/dark_blue2C4355"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <ImageView
+            android:id="@+id/action_bar_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitXY"
+            android:padding="5dp"
+            android:src="@drawable/actionbar"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_cart"
+        android:background="@color/dark_blue2C4355"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar"
+        app:layout_constraintBottom_toTopOf="@+id/cons_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/no_data"
+        android:visibility="gone"
+        android:background="@color/dark_blue2C4355"
+        android:text="購物車是空的"
+        android:textColor="@color/light_grey"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_checkout"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/dark_blue2C4355"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/check_out"
+            android:enabled="false"
+            android:text="@string/checkout"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:background="@color/light_grey"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/sum"
+            android:text="NTD 0"
+            android:textSize="17sp"
+            android:textColor="#FF1000"
+            android:textStyle="bold"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toTopOf="@+id/check_out"
+            app:layout_constraintBottom_toBottomOf="@+id/check_out"
+            app:layout_constraintRight_toLeftOf="@+id/check_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            app:layout_constraintTop_toTopOf="@+id/check_out"
+            app:layout_constraintBottom_toBottomOf="@+id/check_out"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="10dp"
+            android:text="@string/select_all"
+            android:textColor="@color/light_grey"
+            android:buttonTint="@color/light_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/mask"
+            android:visibility="gone"
+            android:background="#80FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

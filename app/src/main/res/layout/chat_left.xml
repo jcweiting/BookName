@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_mutate_background="true"
+        app:riv_oval="true" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/chat_msg"
+        android:layout_marginLeft="10dp"
+        android:text="SHOW MESSAGE"
+        android:padding="12dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:background="@drawable/message_rcvd_bg"
+        app:layout_constraintTop_toTopOf="@+id/profile_picture"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_picture"
+        app:layout_constraintLeft_toRightOf="@+id/profile_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/time"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_msg"
+        app:layout_constraintLeft_toRightOf="@id/chat_msg"
+        android:layout_marginLeft="10dp"
+        android:textSize="13sp"
+        android:textColor="@color/light_grey"
+        android:text="17:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

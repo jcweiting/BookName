@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue2C4355"
+    tools:context=".RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_blue2C4355"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/scroll"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_register"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/page_name_register"
+            app:layout_constraintBottom_toBottomOf="@+id/page_name_register"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/page_name_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="會員註冊"
+            android:textColor="@color/light_grey"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar_register">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/upload_picture"
+                android:scaleType="centerCrop"
+                android:background="@color/dark_grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="15dp"
+                app:riv_mutate_background="true"
+                app:riv_oval="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"/>
+
+            <ImageView
+                android:id="@+id/upload_add"
+                app:layout_constraintTop_toTopOf="@+id/upload_picture"
+                app:layout_constraintLeft_toLeftOf="@+id/upload_picture"
+                app:layout_constraintRight_toRightOf="@+id/upload_picture"
+                app:layout_constraintBottom_toBottomOf="@+id/upload_picture"
+                android:src="@drawable/plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lo_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="80dp"
+                android:hint="帳號"
+                android:scrollbarSize="25sp"
+                app:boxStrokeColor="@color/light_grey"
+                app:boxStrokeErrorColor="@color/red"
+                app:hintTextColor="@color/light_grey"
+                app:layout_constraintTop_toBottomOf="@+id/upload_picture"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                    android:id="@+id/ed_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/light_grey"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lo_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="80dp"
+                android:hint="密碼"
+                android:scrollbarSize="25sp"
+                app:boxStrokeColor="@color/light_grey"
+                app:boxStrokeErrorColor="@color/red"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                app:hintTextColor="@color/light_grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lo_account">
+
+                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                    android:id="@+id/ed_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:textColor="@color/light_grey"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lo_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="80dp"
+                android:hint="暱稱"
+                android:scrollbarSize="25sp"
+                app:boxStrokeColor="@color/light_grey"
+                app:boxStrokeErrorColor="@color/red"
+                app:counterEnabled="true"
+                app:counterMaxLength="15"
+                app:hintTextColor="@color/light_grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lo_password">
+
+                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                    android:id="@+id/ed_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textColor="@color/light_grey"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lo_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="80dp"
+                android:hint="手機"
+                android:scrollbarSize="25sp"
+                app:boxStrokeColor="@color/light_grey"
+                app:boxStrokeErrorColor="@color/red"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:hintTextColor="@color/light_grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lo_nickname">
+
+                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                    android:id="@+id/ed_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/light_grey"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lo_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="80dp"
+                android:hint="電子郵件"
+                android:scrollbarSize="25sp"
+                app:boxStrokeColor="@color/light_grey"
+                app:boxStrokeErrorColor="@color/red"
+                app:hintTextColor="@color/light_grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lo_tel">
+
+                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                    android:id="@+id/ed_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:focusable="false"
+                    android:textColor="@color/dark_grey"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/submit"
+                app:layout_constraintTop_toBottomOf="@+id/lo_email"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/clear"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="70dp"
+                android:clickable="true"
+                android:background="@drawable/register_selector"
+                android:scaleType="fitXY"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+
+            <ImageView
+                android:id="@+id/clear"
+                app:layout_constraintTop_toTopOf="@+id/submit"
+                app:layout_constraintRight_toLeftOf="@id/submit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/submit"
+                android:layout_marginLeft="60dp"
+                android:clickable="true"
+                android:background="@drawable/clear_selector"
+                android:scaleType="fitXY"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

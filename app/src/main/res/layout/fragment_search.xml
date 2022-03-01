@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue2C4355"
+    tools:context=".fragment.SearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/dark_blue2C4355"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/action_bar_title"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/actionbar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.example.second_book_exchange.widget.BookTreeInputEditText
+        android:id="@+id/search_box"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:singleLine="true"
+        android:hint="@string/keyword"
+        android:padding="10dp"
+        android:textColor="@color/light_grey"
+        android:textColorHint="@color/light_grey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/search_icon"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar" />
+
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/loupe_for_search"
+        app:layout_constraintBottom_toBottomOf="@+id/search_box"
+        app:layout_constraintLeft_toRightOf="@+id/search_box"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/search_box" />
+
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/key_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:text="@string/classify_category"
+        android:textColor="@color/light_grey"
+        app:layout_constraintLeft_toRightOf="@+id/expand"
+        app:layout_constraintTop_toBottomOf="@+id/search_box"/>
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/choose"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_grey"
+        android:text="SHOW TEXT"
+        app:layout_constraintLeft_toRightOf="@+id/key_word"
+        app:layout_constraintBottom_toBottomOf="@+id/key_word"
+        app:layout_constraintTop_toTopOf="@+id/key_word" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_classify"
+        android:visibility="gone"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/key_word">
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:text="@string/classify000"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl100"
+            app:layout_constraintTop_toTopOf="@+id/cl000"
+            app:layout_constraintLeft_toRightOf="@+id/cl000"
+            android:layout_marginLeft="15dp"
+            android:text="@string/classify100"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl200"
+            app:layout_constraintTop_toTopOf="@+id/cl100"
+            app:layout_constraintLeft_toRightOf="@+id/cl100"
+            android:layout_marginLeft="15dp"
+            android:text="@string/classify200"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl300"
+            app:layout_constraintTop_toTopOf="@+id/cl200"
+            app:layout_constraintLeft_toRightOf="@+id/cl200"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/classify300"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl400"
+            app:layout_constraintTop_toBottomOf="@+id/cl000"
+            app:layout_constraintLeft_toLeftOf="@+id/cl000"
+            android:layout_marginTop="20dp"
+            android:text="@string/classify400"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl500"
+            app:layout_constraintTop_toTopOf="@+id/cl400"
+            app:layout_constraintLeft_toRightOf="@+id/cl400"
+            android:layout_marginLeft="15dp"
+            android:text="@string/classify500"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl600"
+            app:layout_constraintTop_toTopOf="@+id/cl500"
+            app:layout_constraintLeft_toRightOf="@+id/cl500"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:layout_marginRight="60dp"
+            android:text="@string/classify600"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl700"
+            app:layout_constraintTop_toBottomOf="@+id/cl400"
+            app:layout_constraintLeft_toLeftOf="@+id/cl400"
+            android:layout_marginTop="20dp"
+            android:text="@string/classify700"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl800"
+            app:layout_constraintTop_toTopOf="@+id/cl700"
+            app:layout_constraintLeft_toRightOf="@+id/cl700"
+            android:layout_marginLeft="15dp"
+            android:text="@string/classify800"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/cl900"
+            app:layout_constraintTop_toTopOf="@+id/cl800"
+            app:layout_constraintLeft_toRightOf="@+id/cl800"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="100dp"
+            android:text="@string/classify900"
+            android:textColor="@color/light_grey"
+            android:background="@drawable/search_bg"
+            android:padding="7dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/expand"
+        app:layout_constraintTop_toTopOf="@+id/key_word"
+        app:layout_constraintBottom_toBottomOf="@+id/key_word"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        android:padding="10dp"
+        android:src="@drawable/down1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_info"
+        app:layout_constraintTop_toBottomOf="@+id/search_classify"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_search"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/no_data"
+        app:layout_constraintTop_toBottomOf="@+id/search_classify"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.example.second_book_exchange.widget.BookTreeTextView
+            android:id="@+id/text_no_data"
+            android:text="@string/no_data"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/light_grey"
+            android:textSize="23sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/mask"
+        android:visibility="gone"
+        android:background="#80FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_blueFF7CA3A8"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/book_cover"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_cover" />
+
+    <ImageView
+        android:id="@+id/edit"
+        app:layout_constraintTop_toTopOf="@+id/book_name"
+        app:layout_constraintBottom_toBottomOf="@+id/book_name"
+        app:layout_constraintRight_toRightOf="@+id/add_to_cart"
+        android:src="@drawable/edit"
+        android:layout_width="25dp"
+        android:layout_height="25dp"/>
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/add_to_cart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/function_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/add_to_cart"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/add_to_favorite"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_name" />
+
+    <com.example.second_book_exchange.widget.BookTreeTextView
+        android:id="@+id/add_to_favorite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/function_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/add_to_favorite"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/add_to_cart"
+        app:layout_constraintTop_toBottomOf="@+id/book_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
