@@ -28,6 +28,7 @@ import com.example.second_book_exchange.tool.LoadingDialog;
 import com.example.second_book_exchange.tool.ShipmentDialog;
 import com.example.second_book_exchange.tool.StorageTool;
 import com.example.second_book_exchange.tool.ViewDialog;
+import com.example.second_book_exchange.widget.GlideEngine;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,6 +38,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.luck.picture.lib.basic.PictureSelector;
+import com.luck.picture.lib.config.SelectMimeType;
+import com.luck.picture.lib.entity.LocalMedia;
+import com.luck.picture.lib.interfaces.OnResultCallbackListener;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -82,9 +87,36 @@ public class AddBookActivity extends AppCompatActivity implements View.OnFocusCh
             @Override
             public void onClick(View view) {
 
-                //啟動選擇照片,導向onActivityResult
-                CropImage.activity().setGuidelines(CropImageView.Guidelines.ON)
-                        .start(AddBookActivity.this);
+                //PictureSelector套件
+                PictureSelector.create(AddBookActivity.this)
+                        .openGallery(SelectMimeType.ofImage())
+                        .setMaxSelectNum(1)
+                        .setMinSelectNum(1)
+                        .setImageEngine(GlideEngine.createGlideEngine())
+                        .forResult(new OnResultCallbackListener<LocalMedia>() {
+                            @Override
+                            public void onResult(ArrayList<LocalMedia> result) {
+
+                                String localMedia = result.get(0).getPath();
+                                Uri uri = Uri.parse(localMedia);
+
+                                try {
+                                    //處理照片
+                                    bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
+
+                                    //顯示照片
+                                    ivAddBtn.setVisibility(View.GONE);
+                                    ivAddPicture.setImageBitmap(bitmap);
+
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            @Override
+                            public void onCancel() {
+                            }
+                        });
             }
         });
 
@@ -394,27 +426,6 @@ public class AddBookActivity extends AppCompatActivity implements View.OnFocusCh
 
     private void showHint(String content) {
         Toast.makeText(AddBookActivity.this,content,Toast.LENGTH_SHORT).show();
-    }
-
-    //照片轉成data格式, 處理照片
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
-            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-
-            if (result == null){
-                Log.i("Joyce","無任何資料");
-                return;
-            }
-
-            try {
-                handlePhoto(result);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        }
     }
 
     //處理照片                                                  //try catch另一種打法

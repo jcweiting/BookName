@@ -51,6 +51,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/upload_add"
+                app:layout_constraintTop_toTopOf="@+id/upload_picture"
+                app:layout_constraintLeft_toLeftOf="@+id/upload_picture"
+                app:layout_constraintRight_toRightOf="@+id/upload_picture"
+                app:layout_constraintBottom_toBottomOf="@+id/upload_picture"
+                android:src="@drawable/plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/upload_picture"
                 android:scaleType="centerCrop"
@@ -63,16 +74,6 @@
                 app:riv_oval="true"
                 android:layout_width="120dp"
                 android:layout_height="120dp"/>
-
-            <ImageView
-                android:id="@+id/upload_add"
-                app:layout_constraintTop_toTopOf="@+id/upload_picture"
-                app:layout_constraintLeft_toLeftOf="@+id/upload_picture"
-                app:layout_constraintRight_toRightOf="@+id/upload_picture"
-                app:layout_constraintBottom_toBottomOf="@+id/upload_picture"
-                android:src="@drawable/plus"
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/lo_account"

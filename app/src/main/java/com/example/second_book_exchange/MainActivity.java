@@ -136,6 +136,5 @@ public class MainActivity extends AppCompatActivity {
                 changePage(MemberFragment.newInstance());
             }
         });
-
     }
 }

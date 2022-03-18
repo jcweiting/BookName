@@ -5,7 +5,10 @@ import static com.example.second_book_exchange.fragment.MemberFragment.USER;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
+import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -26,6 +29,7 @@ import com.example.second_book_exchange.log.JoyceLog;
 import com.example.second_book_exchange.tool.LoadingDialog;
 import com.example.second_book_exchange.tool.StorageTool;
 import com.example.second_book_exchange.tool.ViewDialog;
+import com.example.second_book_exchange.widget.GlideEngine;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -35,10 +39,20 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 import com.google.gson.Gson;
+import com.luck.picture.lib.basic.PictureSelector;
+import com.luck.picture.lib.config.PictureMimeType;
+import com.luck.picture.lib.config.SelectMimeType;
+import com.luck.picture.lib.engine.CropEngine;
+import com.luck.picture.lib.entity.LocalMedia;
+import com.luck.picture.lib.interfaces.OnResultCallbackListener;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,9 +79,12 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        JoyceLog.i("start add new book");
+
         compositeDisposable = new CompositeDisposable();
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+
         initView();
 
         ivBack.setOnClickListener(new View.OnClickListener() {
@@ -101,9 +118,42 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //啟動選擇照片,導向onActivityResult
-                CropImage.activity().setGuidelines(CropImageView.Guidelines.ON)
-                        .start(RegisterActivity.this);
+                //PictureSelector套件
+                PictureSelector.create(RegisterActivity.this)
+                        .openGallery(SelectMimeType.ofImage())
+                        .setMaxSelectNum(1)
+                        .setMinSelectNum(1)
+                        .setImageEngine(GlideEngine.createGlideEngine())
+                        .forResult(new OnResultCallbackListener<LocalMedia>() {
+                            @Override
+                            public void onResult(ArrayList<LocalMedia> result) {
+
+                                String localMedia = result.get(0).getPath();
+                                JoyceLog.i("localMedia: "+result.get(0).getPath());
+
+                                Uri uri = Uri.parse(localMedia);
+
+                                try {
+                                    //處理照片
+                                    bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
+
+                                    //顯示照片
+                                    ivUploadPicIcon.setVisibility(View.GONE);
+                                    ivUploadPic.setImageBitmap(bitmap);
+
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            @Override
+                            public void onCancel() {
+                            }
+                        });
+                
+//                啟動選擇照片,導向onActivityResult
+//                CropImage.activity().setGuidelines(CropImageView.Guidelines.ON)
+//                        .start(RegisterActivity.this);
             }
         });
 
@@ -205,34 +255,34 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    //照片轉成data格式,處理照片
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
-            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-
-            if (result == null){
-                Log.i("Joyce","無任何資料");
-                return;
-            }
-
-            try {
-
-                //處理照片
-                Uri uri = result.getUri();
-                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
-
-                //顯示照片
-                ivUploadPicIcon.setVisibility(View.GONE);
-                ivUploadPic.setImageBitmap(bitmap);
-
-            }catch (Exception e ){
-                e.printStackTrace();
-            }
-        }
-    }
+//    照片轉成data格式,處理照片
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
+//            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+//
+//            if (result == null){
+//                Log.i("Joyce","無任何資料");
+//                return;
+//            }
+//
+//            try {
+//
+//                //處理照片
+//                Uri uri = result.getUri();
+//                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
+//
+//                //顯示照片
+//                ivUploadPicIcon.setVisibility(View.GONE);
+//                ivUploadPic.setImageBitmap(bitmap);
+//
+//            }catch (Exception e ){
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
     private void updateUserBasicData(FirebaseUser user, String userPhotoUrl) {
 
@@ -393,6 +443,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void initView() {
+
+        JoyceLog.i("initView");
+
         ivBack = findViewById(R.id.back_register);
         ivClear = findViewById(R.id.clear);
         ivSubmit = findViewById(R.id.submit);

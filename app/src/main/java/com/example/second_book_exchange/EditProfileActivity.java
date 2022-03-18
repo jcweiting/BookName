@@ -25,6 +25,7 @@ import com.example.second_book_exchange.tool.ImageLoaderProvider;
 import com.example.second_book_exchange.tool.LoadingDialog;
 import com.example.second_book_exchange.tool.StorageTool;
 import com.example.second_book_exchange.tool.ViewDialog;
+import com.example.second_book_exchange.widget.GlideEngine;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -34,11 +35,16 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 import com.google.gson.Gson;
+import com.luck.picture.lib.basic.PictureSelector;
+import com.luck.picture.lib.config.SelectMimeType;
+import com.luck.picture.lib.entity.LocalMedia;
+import com.luck.picture.lib.interfaces.OnResultCallbackListener;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -117,8 +123,36 @@ public class EditProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                CropImage.activity().setGuidelines(CropImageView.Guidelines.ON)
-                        .start(EditProfileActivity.this);
+                //PictureSelector套件
+                PictureSelector.create(EditProfileActivity.this)
+                        .openGallery(SelectMimeType.ofImage())
+                        .setMaxSelectNum(1)
+                        .setMinSelectNum(1)
+                        .setImageEngine(GlideEngine.createGlideEngine())
+                        .forResult(new OnResultCallbackListener<LocalMedia>() {
+                            @Override
+                            public void onResult(ArrayList<LocalMedia> result) {
+
+                                String localMedia = result.get(0).getPath();
+                                Uri uri = Uri.parse(localMedia);
+
+                                try {
+                                    //處理照片
+                                    bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
+
+                                    //顯示照片
+                                    ivUploadPicIcon.setVisibility(View.GONE);
+                                    ivUploadPic.setImageBitmap(bitmap);
+
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            @Override
+                            public void onCancel() {
+                            }
+                        });
             }
         });
     }
@@ -216,35 +250,6 @@ public class EditProfileActivity extends AppCompatActivity {
 
         Log.i("Joyce", "EditProfile --> showProgressDiaLog() --> show Dialog");
 
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        Log.i("Joyce", "EditProfile --> 現在在onActivityResult()");
-
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
-            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-
-
-            if (result == null) {
-                Log.i("Joyce", "無任何資料");
-                return;
-            }
-
-            try {
-                Uri uri = result.getUri();
-                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-
-                ivUploadPicIcon.setVisibility(View.GONE);
-                ivUploadPic.setImageBitmap(bitmap);
-                Log.i("Joyce", "EditProfile --> 已設定ivUploadPic");
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     private boolean isCheckNewData(String nickName, String tel) {
