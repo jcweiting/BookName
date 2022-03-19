@@ -18,7 +18,7 @@
         app:riv_mutate_background="true"
         app:riv_oval="true" />
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/chat_msg"
         android:layout_marginLeft="10dp"
         android:text="SHOW MESSAGE"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/time"
         app:layout_constraintBottom_toBottomOf="@+id/chat_msg"
         app:layout_constraintLeft_toRightOf="@id/chat_msg"

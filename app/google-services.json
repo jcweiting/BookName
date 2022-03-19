@@ -7,6 +7,59 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:383111724544:android:bc2c31b3ef958fe4c422e5",
+        "android_client_info": {
+          "package_name": "com.book.second_book_exchange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383111724544-5j4ldsc27ihqoh5edp3rdtfm4m1lgn3q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.book.second_book_exchange",
+            "certificate_hash": "7b6a9a28621963df9e9b0d76bb01497ec9af0e40"
+          }
+        },
+        {
+          "client_id": "383111724544-hg138es5ej8j7sct6t6fpc22jc4s4jll.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.book.second_book_exchange",
+            "certificate_hash": "919fc7072a5c94d1ed9e2ea2419c3d83038860a5"
+          }
+        },
+        {
+          "client_id": "383111724544-ntbk4v0sdbk1n4vn50u2hmd4r8pc4bqp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.book.second_book_exchange",
+            "certificate_hash": "de91cf39e0410472b62091459a24737eb5082b3e"
+          }
+        },
+        {
+          "client_id": "383111724544-4q2gu4vhq39np6s3399aq153kvq26fnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1P1FHqDUIAjxHoN1mmZvFJXAP7dXxGYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383111724544-4q2gu4vhq39np6s3399aq153kvq26fnl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:383111724544:android:990591777f1113adc422e5",
         "android_client_info": {
           "package_name": "com.example.second_book_exchange"
@@ -14,11 +67,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "383111724544-b32h8h2jclkbv68nfulgm7gjo6dsoumf.apps.googleusercontent.com",
+          "client_id": "383111724544-34g89s565k1gqvj5c6ar554b24dqgeeq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.second_book_exchange",
-            "certificate_hash": "025b28ab47504f314cc20ca01c704c5c5d1de338"
+            "certificate_hash": "cf2893ff64362dee837fed9719627c4ad4090688"
           }
         },
         {

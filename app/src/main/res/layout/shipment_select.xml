@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/opt_seven">
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/family"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/family_fee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         app:layout_constraintBottom_toTopOf="@+id/opt_delivery"
         app:layout_constraintTop_toBottomOf="@+id/opt_family">
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/seven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/seven_fee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
         app:layout_constraintBottom_toTopOf="@+id/opt_face"
         app:layout_constraintTop_toBottomOf="@+id/opt_seven">
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/delivery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/delivery_fee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/opt_delivery">
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/face"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/face_fee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

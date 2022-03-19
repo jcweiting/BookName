@@ -25,7 +25,7 @@
             android:layout_width="27dp"
             android:layout_height="27dp"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/page_name"
             android:text="匯款資訊"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +49,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/code_title"
         android:text="銀行代碼"
         android:textColor="@color/light_grey"
@@ -63,7 +63,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeInputEditText
+    <com.book.second_book_exchange.widget.BookTreeInputEditText
         android:id="@+id/code"
         android:textColor="@color/light_grey"
         android:background="#B3666565"
@@ -88,7 +88,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/account_title"
         android:text="銀行帳號"
         android:textColor="@color/light_grey"
@@ -102,7 +102,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeInputEditText
+    <com.book.second_book_exchange.widget.BookTreeInputEditText
         android:id="@+id/account"
         android:textColor="@color/light_grey"
         android:inputType="number"
@@ -127,7 +127,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/name_title"
         android:text="銀行戶名"
         android:textColor="@color/light_grey"
@@ -141,7 +141,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeInputEditText
+    <com.book.second_book_exchange.widget.BookTreeInputEditText
         android:id="@+id/name"
         android:textColor="@color/light_grey"
         android:background="#B3666565"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/email"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/bank_code"
         app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintLeft_toLeftOf="@+id/email"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/bank_account"
         app:layout_constraintTop_toBottomOf="@+id/bank_code"
         app:layout_constraintLeft_toLeftOf="@+id/email"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/bank_name"
         app:layout_constraintTop_toBottomOf="@+id/bank_account"
         app:layout_constraintLeft_toLeftOf="@+id/email"
@@ -59,7 +59,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/shipment"
         android:text="運送方式"
         android:textSize="15sp"
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/sum"
         android:text="總金額"
         android:textSize="15sp"

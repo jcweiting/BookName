@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ChatRoomActivity">
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/user_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         app:layout_constraintBottom_toTopOf="@+id/enter_message"
         app:layout_constraintTop_toBottomOf="@+id/back" />
 
-    <com.example.second_book_exchange.widget.BookTreeInputEditText
+    <com.book.second_book_exchange.widget.BookTreeInputEditText
         android:id="@+id/enter_message"
         android:background="@drawable/edit_profile_bg"
         android:textColor="@color/white"
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/send"
         android:layout_marginRight="10dp"
         android:text="@string/send"

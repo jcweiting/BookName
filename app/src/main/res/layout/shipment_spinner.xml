@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/shipment"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/price"
         app:layout_constraintTop_toTopOf="@+id/shipment"
         app:layout_constraintBottom_toBottomOf="@+id/shipment"

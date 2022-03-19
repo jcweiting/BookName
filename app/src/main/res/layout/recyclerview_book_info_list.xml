@@ -7,7 +7,7 @@
     android:background="@color/light_blueFF7CA3A8"
     tools:context=".BookInfoActivity">
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/list_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         android:textSize="17sp"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/list_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

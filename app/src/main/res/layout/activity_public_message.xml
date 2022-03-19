@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="@+id/page_name"
             app:layout_constraintBottom_toBottomOf="@+id/page_name"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/page_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"/>
 
-    <com.example.second_book_exchange.widget.BookTreeInputEditText
+    <com.book.second_book_exchange.widget.BookTreeInputEditText
         android:id="@+id/message"
         app:layout_constraintTop_toBottomOf="@+id/recyclerview_public_message"
         app:layout_constraintLeft_toRightOf="@+id/smile"
@@ -71,7 +71,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/post"
         app:layout_constraintTop_toTopOf="@+id/message"
         app:layout_constraintLeft_toRightOf="@+id/message"

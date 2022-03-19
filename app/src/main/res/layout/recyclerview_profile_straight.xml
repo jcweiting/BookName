@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/no_data_arr"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -52,7 +52,7 @@
             app:riv_mutate_background="true"
             app:riv_oval="true" />
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/user_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
             app:layout_constraintLeft_toRightOf="@+id/love"
             app:layout_constraintTop_toTopOf="@+id/love" />
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/message_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

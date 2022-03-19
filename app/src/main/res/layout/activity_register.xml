@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="@+id/page_name_register"
             app:layout_constraintBottom_toBottomOf="@+id/page_name_register"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/page_name_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent">
 
-                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                <com.book.second_book_exchange.widget.BookTreeInputEditText
                     android:id="@+id/ed_account"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lo_account">
 
-                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                <com.book.second_book_exchange.widget.BookTreeInputEditText
                     android:id="@+id/ed_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lo_password">
 
-                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                <com.book.second_book_exchange.widget.BookTreeInputEditText
                     android:id="@+id/ed_nickname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -178,7 +178,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lo_nickname">
 
-                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                <com.book.second_book_exchange.widget.BookTreeInputEditText
                     android:id="@+id/ed_tel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -205,7 +205,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lo_tel">
 
-                <com.example.second_book_exchange.widget.BookTreeInputEditText
+                <com.book.second_book_exchange.widget.BookTreeInputEditText
                     android:id="@+id/ed_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

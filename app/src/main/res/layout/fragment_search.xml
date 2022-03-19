@@ -31,7 +31,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <com.example.second_book_exchange.widget.BookTreeInputEditText
+    <com.book.second_book_exchange.widget.BookTreeInputEditText
         android:id="@+id/search_box"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toTopOf="@+id/search_box" />
 
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/key_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
         app:layout_constraintLeft_toRightOf="@+id/expand"
         app:layout_constraintTop_toBottomOf="@+id/search_box"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/choose"
         android:visibility="gone"
         android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/key_word">
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl000"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl100"
             app:layout_constraintTop_toTopOf="@+id/cl000"
             app:layout_constraintLeft_toRightOf="@+id/cl000"
@@ -119,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl200"
             app:layout_constraintTop_toTopOf="@+id/cl100"
             app:layout_constraintLeft_toRightOf="@+id/cl100"
@@ -133,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl300"
             app:layout_constraintTop_toTopOf="@+id/cl200"
             app:layout_constraintLeft_toRightOf="@+id/cl200"
@@ -148,7 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl400"
             app:layout_constraintTop_toBottomOf="@+id/cl000"
             app:layout_constraintLeft_toLeftOf="@+id/cl000"
@@ -162,7 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl500"
             app:layout_constraintTop_toTopOf="@+id/cl400"
             app:layout_constraintLeft_toRightOf="@+id/cl400"
@@ -176,7 +176,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl600"
             app:layout_constraintTop_toTopOf="@+id/cl500"
             app:layout_constraintLeft_toRightOf="@+id/cl500"
@@ -192,7 +192,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl700"
             app:layout_constraintTop_toBottomOf="@+id/cl400"
             app:layout_constraintLeft_toLeftOf="@+id/cl400"
@@ -206,7 +206,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl800"
             app:layout_constraintTop_toTopOf="@+id/cl700"
             app:layout_constraintLeft_toRightOf="@+id/cl700"
@@ -220,7 +220,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/cl900"
             app:layout_constraintTop_toTopOf="@+id/cl800"
             app:layout_constraintLeft_toRightOf="@+id/cl800"
@@ -276,7 +276,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-        <com.example.second_book_exchange.widget.BookTreeTextView
+        <com.book.second_book_exchange.widget.BookTreeTextView
             android:id="@+id/text_no_data"
             android:text="@string/no_data"
             app:layout_constraintTop_toTopOf="parent"

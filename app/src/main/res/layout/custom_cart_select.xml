@@ -15,7 +15,7 @@
         android:layout_width="130dp"
         android:layout_height="120dp"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/name"
         app:layout_constraintTop_toTopOf="@+id/cover"
         app:layout_constraintLeft_toRightOf="@+id/cover"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/unit_price"
         app:layout_constraintTop_toBottomOf="@+id/name"
         app:layout_constraintLeft_toLeftOf="@id/name"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/minus"
         app:layout_constraintLeft_toLeftOf="@id/cover"
         app:layout_constraintRight_toLeftOf="@+id/qty"
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/qty"
         app:layout_constraintLeft_toRightOf="@+id/minus"
         app:layout_constraintTop_toTopOf="@+id/minus"
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/add"
         app:layout_constraintLeft_toRightOf="@+id/qty"
         app:layout_constraintRight_toRightOf="@+id/cover"
@@ -83,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/add_to_cart"
         app:layout_constraintTop_toTopOf="@+id/minus"
         app:layout_constraintBottom_toBottomOf="@+id/minus"

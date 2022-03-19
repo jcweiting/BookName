@@ -20,7 +20,7 @@
         app:riv_mutate_background="true"
         app:riv_oval="true" />
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/public_message_id"
         android:layout_marginLeft="10dp"
         android:text="SHOW MESSAGE ID"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/public_message_content"
         android:text="SHOW MESSAGE"
         android:textSize="14sp"

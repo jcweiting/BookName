@@ -27,7 +27,7 @@
         android:layout_width="150dp"
         android:layout_height="120dp"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/book_name"
         app:layout_constraintTop_toTopOf="@+id/book_cover"
         app:layout_constraintLeft_toRightOf="@+id/book_cover"
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/amount"
         app:layout_constraintBottom_toBottomOf="@+id/book_cover"
         app:layout_constraintRight_toRightOf="parent"
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/minus"
         app:layout_constraintBottom_toBottomOf="@+id/book_cover"
         app:layout_constraintLeft_toLeftOf="@id/book_name"
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/qty"
         app:layout_constraintLeft_toRightOf="@+id/minus"
         app:layout_constraintTop_toTopOf="@+id/minus"
@@ -74,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/add"
         app:layout_constraintLeft_toRightOf="@+id/qty"
         app:layout_constraintTop_toTopOf="@+id/minus"

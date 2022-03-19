@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="#595959">
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/code0"
         android:gravity="center"
         android:text="0 - 交易中"
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"/>
 
-    <com.example.second_book_exchange.widget.BookTreeTextView
+    <com.book.second_book_exchange.widget.BookTreeTextView
         android:id="@+id/code1"
         android:gravity="center"
         android:text="1 - 完成交易"
